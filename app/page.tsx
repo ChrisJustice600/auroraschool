@@ -1,10 +1,12 @@
-"use client";
-import Header from "@/_components/Header";
+import HeadInfos from "@/src/_components/HeadInfos";
+import Navbar from "@/src/_components/Navbar";
+import "./style.css";
 
 export default function page() {
   return (
-    <div>
-      <Header />
+    <div className="w-full">
+      <HeadInfos />
+      <Navbar />
     </div>
   );
 }

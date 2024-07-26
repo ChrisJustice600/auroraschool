@@ -1,45 +1,9 @@
 "use client";
-import FacebookIcon from "@/_components/icons/FacebookIcon";
-import WhatsAppIcon from "@/_components/icons/WhatsAppIcon";
-import { Mail, MapPin } from "lucide-react";
-import { useEffect, useState } from "react";
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <div>
-      <div className={` ${isScrolled ? "hidden" : ""}`}>
-        <div className="hidden md:flex justify-between items-center bg-blue-400 py-2 px-10 text-sm text-white">
-          <div className="flex justify-center items-center gap-2">
-            <Mail color="white" size={16} /> contact@lpl-rdc.com
-          </div>
-          <div className="flex justify-center items-center gap-2">
-            <MapPin />
-            N°22 Av. 36 ème rue, Kimbangu. Kalamu. Kinshasa RD Congo
-          </div>
-          <div className="flex justify-center items-center gap-2">
-            <FacebookIcon size={25} className="text-foreground" />
-            <WhatsAppIcon size={25} className="text-foreground" />
-          </div>
-        </div>
-      </div>
-      <header>
+      <header className="">
         <input
           type="checkbox"
           name="hbr"
@@ -51,7 +15,7 @@ export default function Header() {
         <nav className="fixed z-20 w-full bg-white/90 dark:bg-gray-900/80 backdrop-blur navbar shadow-2xl shadow-gray-600/5 border-b border-gray-100 dark:border-gray-800 peer-checked:navbar-active dark:shadow-none">
           <div className="xl:container m-auto px-6 md:px-12 lg:px-6">
             <div className="flex flex-wrap items-center justify-between gap-6 md:py-3 md:gap-0 lg:py-5">
-              <div className="w-full items-center flex justify-between lg:w-auto">
+              <div className="w-full items-center flex justify-between lg:w-auto text-[16px] ">
                 <a className="relative z-10" href="#" aria-label="logo">
                   <svg
                     className="h-9 text-primary dark:text-primaryLight"
@@ -151,6 +115,7 @@ export default function Header() {
             </div>
           </div>
         </nav>
+        <div className="bg-accent mt-14 h-10">text</div>
       </header>
     </div>
   );
