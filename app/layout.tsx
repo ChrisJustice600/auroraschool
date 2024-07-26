@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Loved_by_the_King } from "next/font/google";
 
+import { cn } from "@/lib/utils";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// const Loved = Loved_by_the_King({
-//   weight: ["400"],
-//   subsets: ["latin"],
-//   variable: "--font-caption",
-// });
+const Loved = Loved_by_the_King({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-caption",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,7 +24,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn(
+          Loved.variable,
+          inter.className,
+          "font-sans h-full bg-background text-foreground"
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }

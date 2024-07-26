@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <div>
       {" "}
-      <nav className="bg-gradient-to-r from-purple-100 to-indigo-100 shadow-lg">
+      <nav className="bg-gradient-to-r z-20 from-purple-100 to-indigo-100 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
@@ -84,7 +84,12 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div id="mobile-menu" className={`md:hidden ${isOpen ? "" : "hidden"}`}>
+        <div
+          id="mobile-menu"
+          className={`md:hidden absolute top-16 left-0 w-full ${
+            isOpen ? "block" : "hidden"
+          } z-30`}
+        >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 mobile-menu bg-primary-foreground">
             <a
               href="/"
