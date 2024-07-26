@@ -6,11 +6,11 @@ export default function About() {
   return (
     <Section className="bg-background">
       <div className="my-8 flex flex-col md:flex-row gap-4">
-        <div className="flex flex-col items-center md:flex-1">
-          <h2 className="uppercase text-[2rem] font-caption text-primary font-medium">
+        <div className="flex flex-col md:flex-1">
+          <h2 className=" text-left uppercase text-[2rem] font-caption text-primary font-medium">
             présentation de l'école
           </h2>
-          <div>
+          <div className="text-left">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla,
             perferendis. Eveniet quas eum, in libero distinctio obcaecati
             itaque, quasi eligendi ducimus suscipit, optio nesciunt vero
