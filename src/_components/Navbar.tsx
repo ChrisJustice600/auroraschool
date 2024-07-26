@@ -29,8 +29,8 @@ export default function Navbar() {
                   />
                 </svg>
               </a>
-              <div className="ml-4 text-xl font-bold text-foreground">
-                École Innovante
+              <div className="ml-4 text-xl font-bold font-marker text-foreground">
+                École Aurora Dawn
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-4 font-bold">
@@ -68,16 +68,16 @@ export default function Navbar() {
             <div className="md:hidden flex items-center">
               <button
                 id="hamburger"
-                className={`hamburger text-foreground focus:outline-none ${
+                className={`hamburger text-foreground focus:outline-none group ${
                   isOpen ? "active" : ""
                 }`}
                 aria-label="Menu"
                 onClick={toggleMenu}
               >
                 <div className="w-6 h-6 flex flex-col justify-between text-primary">
-                  <span className="hamburger-line h-1 w-6 bg-primary rounded-full line-1"></span>
-                  <span className="hamburger-line h-1 w-6 bg-primary rounded-full line-2"></span>
-                  <span className="hamburger-line h-1 w-6 bg-primary rounded-full line-3"></span>
+                  <span className="hamburger-line h-1 w-6 bg-primary rounded-full group-hover:bg-orange-600 line-1"></span>
+                  <span className="hamburger-line h-1 w-6 bg-primary  rounded-full group-hover:bg-orange-600 line-2"></span>
+                  <span className="hamburger-line h-1 w-6 bg-primary  rounded-full group-hover:bg-orange-600 line-3"></span>
                 </div>
               </button>
             </div>

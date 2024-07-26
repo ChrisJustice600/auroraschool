@@ -24,7 +24,7 @@ export default function HeadInfos() {
   }, []);
   return (
     <div className={`w-full ${isScrolled ? "hidden" : ""}`}>
-      <div className="hidden md:flex justify-between items-center bg-blue-400 py-2 px-10 text-sm text-white">
+      <div className="hidden md:flex justify-between items-center bg-primary py-2 px-10 text-sm text-white">
         <div className="flex justify-center items-center gap-2">
           <Mail color="white" size={16} /> contact@lpl-rdc.com
         </div>

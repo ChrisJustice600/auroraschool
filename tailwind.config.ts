@@ -19,6 +19,8 @@ const config = {
     },
     fontFamily: {
       caption: ["var(--font-caption)"],
+      marker: ["var(--font-marker)"],
+      roboto: ["var(--font-roboto)"],
     },
     extend: {
       colors: {

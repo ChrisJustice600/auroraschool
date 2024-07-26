@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "TimeToSchool1";
+  src: url("../fonts/my-font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TimeToSchool";
+  src: url("/fonts/TimeToSchool.otf") format("opentype");
+}
