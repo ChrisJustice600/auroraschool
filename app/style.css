@@ -1,3 +1,5 @@
+/* ANIMATION MENU HAMBURGER */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -31,4 +33,29 @@
 }
 .hamburger.active .line-3 {
   transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* ANIMATION SLIDER HERO */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+.slide-in {
+  animation: slideIn 0.5s ease-out forwards;
 }
