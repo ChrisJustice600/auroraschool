@@ -5,25 +5,30 @@ import { Mail, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function HeadInfos() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true); // Initial visibility state
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
+      const scrollY = window.scrollY || window.pageYOffset; // Cross-browser scroll position
+      const threshold = document.documentElement.clientHeight * 0.75; // Hide after 75% scroll
+
+      if (scrollY > threshold) {
+        setIsVisible(false);
       } else {
-        setIsScrolled(false);
+        setIsVisible(true);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    // Cleanup function to remove event listener on component unmount
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
-    <div className={`w-full ${isScrolled ? "hidden" : ""}`}>
+    <div className={`w-full ${isVisible ? "" : "hidden"}`}>
+      {" "}
+      {/* Conditional visibility */}
       <div className="hidden md:flex justify-between items-center bg-primary py-2 px-10 text-sm text-white">
         <div className="flex justify-center items-center gap-2">
           <Mail color="white" size={16} /> contact@lpl-rdc.com
