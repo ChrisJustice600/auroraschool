@@ -39,14 +39,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full overflow-auto">
+    <html lang="en" className="h-full ">
       <body
         className={cn(
           Loved.variable,
           PermanentMarker.variable,
           RobotoFont.variable,
           inter.className,
-          "font-sans h-full bg-background text-foreground overflow-y-auto"
+          "font-sans h-full bg-background text-foreground "
         )}
       >
         {children}

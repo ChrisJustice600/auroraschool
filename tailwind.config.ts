@@ -23,9 +23,6 @@ const config = {
       roboto: ["var(--font-roboto)"],
     },
     extend: {
-      scrollPadding: {
-        top: "32px",
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
