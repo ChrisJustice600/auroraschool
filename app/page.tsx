@@ -1,4 +1,5 @@
 import About from "@/src/_components/About";
+import AdmissionSection from "@/src/_components/Admission";
 import HeadInfos from "@/src/_components/HeadInfos";
 import HeroSection from "@/src/_components/Hero";
 import Navbar from "@/src/_components/Navbar";
@@ -13,7 +14,7 @@ export default function page() {
       <HeroSection />
       <About />
       <Program />
-      {/* <AdmissionSection /> */}
+      <AdmissionSection />
     </div>
   );
 }
