@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-// components/FloatingCards.tsx
 "use client";
 import { motion } from "framer-motion";
 import React, { useEffect, useRef } from "react";
@@ -57,6 +56,7 @@ const ProgrammeCard: React.FC<{ programme: Programme; index: number }> = ({
   const cardRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    // observer for the scroll
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

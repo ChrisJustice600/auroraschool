@@ -13,6 +13,7 @@ export default function page() {
       <HeroSection />
       <About />
       <Program />
+      {/* <AdmissionSection /> */}
     </div>
   );
 }

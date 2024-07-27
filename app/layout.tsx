@@ -46,7 +46,7 @@ export default function RootLayout({
           PermanentMarker.variable,
           RobotoFont.variable,
           inter.className,
-          "font-sans h-full bg-background text-foreground"
+          "font-sans h-full bg-background text-foreground overflow-y-scroll"
         )}
       >
         {children}
