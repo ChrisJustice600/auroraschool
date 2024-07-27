@@ -66,16 +66,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgb(177, 175, 175);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(54, 53, 53, 0.5);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(31, 31, 31, 0.7);
 }
 
 /* Custom animations */
@@ -104,6 +104,11 @@
 }
 .to-blue-600 {
   --tw-gradient-to: #2563eb;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Custom animation for info cards */
