@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
+import { Download } from "lucide-react";
+import Link from "next/link";
 import { useEffect } from "react";
 import Section from "./Section";
 
@@ -78,6 +80,8 @@ export default function AdmissionSection() {
       });
     };
   }, []);
+  const pdfUrl = "/Lettre_de_motivation1.pdf"; // Remplacez par l'URL de votre fichier
+
   return (
     <Section className="bg-gradient-to-r from-green-300 to-blue-500 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -100,13 +104,13 @@ export default function AdmissionSection() {
             </div>
           ))}
         </div>
-        <div className="mt-12 text-center">
-          <a
-            href="https://websim.io/lycee/admission/procedure"
-            className="inline-block bg-yellow-400 text-blue-900 font-bold py-3 px-8 rounded-full hover:bg-white hover:text-blue-600 transition duration-300 transform hover:-translate-y-1 shadow-lg"
-          >
-            Télécharger la fiche de renseignemnt
-          </a>
+        <div className="mt-12 text-center inline-block bg-yellow-400 text-blue-900 font-bold py-3 px-8 rounded-full hover:bg-white hover:text-blue-600 transition duration-300 transform hover:-translate-y-1 shadow-lg">
+          <Link href={pdfUrl}>
+            <button className="flex items-center justify-center gap-2">
+              <span>Télécharger la fiche de renseignemnt</span>
+              <Download />
+            </button>
+          </Link>
         </div>
       </div>
     </Section>
