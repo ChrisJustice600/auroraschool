@@ -31,6 +31,7 @@ const PermanentMarker = Permanent_Marker({
 export const metadata: Metadata = {
   title: "Ecole chretienne aurora dawn",
   description: "Ecole par excellencce de kinshasa",
+  icons: ["/favicon.ico"],
 };
 
 export default function RootLayout({
