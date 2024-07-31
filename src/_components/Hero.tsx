@@ -55,7 +55,7 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <div className="relative h-[50vh] overflow-hidden">
+    <div className="relative h-[50vh] overflow-hidden md:mt-20">
       {slides.map((slide, index) => (
         <div
           key={index}
