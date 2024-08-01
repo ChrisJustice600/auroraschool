@@ -3,6 +3,7 @@ import AdmissionSection from "@/src/_components/Admission";
 import HeroSection from "@/src/_components/Hero";
 import Navbar from "@/src/_components/Navbar";
 import Program from "@/src/_components/Program";
+import Statistic from "@/src/_components/Statistic";
 import "./style.css";
 
 export default function page() {
@@ -13,6 +14,7 @@ export default function page() {
       <About />
       <Program />
       <AdmissionSection />
+      <Statistic />
     </div>
   );
 }
