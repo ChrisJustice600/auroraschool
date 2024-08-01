@@ -17,19 +17,19 @@ export default function Statistic() {
       icon: "🎓",
       title: "Sections",
       description: "5",
-      color: "bg-yellow-400",
+      color: "bg-primary",
     },
     {
       icon: "📚",
       title: "Elèves",
       description: "420",
-      color: "bg-green-500",
+      color: "bg-primary",
     },
     {
       icon: "👨‍🏫",
       title: "Existance",
       description: " 15 ans",
-      color: "bg-orange-500",
+      color: "bg-primary",
     },
   ];
 
