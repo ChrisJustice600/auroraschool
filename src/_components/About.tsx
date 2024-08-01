@@ -7,7 +7,7 @@ export default function About() {
     <Section className="bg-background">
       <div className="my-8 flex flex-col md:flex-row gap-4">
         <div className="flex flex-col md:flex-1">
-          <h2 className=" text-left uppercase text-[2rem] font-caption text-primary font-medium mb-2">
+          <h2 className=" text-left uppercase text-[2rem] font-caption text-primary font-bold mb-2">
             présentation de l'école
           </h2>
           <div className="text-left font-roboto">

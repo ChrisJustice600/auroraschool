@@ -6,7 +6,7 @@ export default function Program() {
     <Section className="bg-border">
       <div className="">
         <div className="">
-          <h2 className="text-left uppercase text-[2rem] font-caption text-primary font-medium mb-2">
+          <h2 className="text-left uppercase text-[2rem] font-caption text-primary font-bold mb-2">
             nos programmes et options
           </h2>
           <p className="text-left font-roboto">

@@ -34,8 +34,8 @@ export default function Statistic() {
   ];
 
   return (
-    <Section>
-      <h2 className="text-left uppercase text-[2rem] font-caption text-primary font-medium mb-2">
+    <Section className="font-roboto">
+      <h2 className="text-left uppercase text-[2rem] font-caption text-primary font-bold mb-2">
         Ecole chretienne aurora dawn <br /> Chiffres-clés 3
       </h2>
       <div className="ml-[-20px] ">
