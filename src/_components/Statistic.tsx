@@ -38,26 +38,28 @@ export default function Statistic() {
       <h2 className="text-left uppercase text-[2rem] font-caption text-primary font-medium mb-2">
         Ecole chretienne aurora dawn <br /> Chiffres-clés 3
       </h2>
-      <Swiper
-        slidesPerView={2}
-        // spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        modules={[Navigation, Autoplay]}
-        className="mySwiper"
-      >
-        {cards.map((card, index) => (
-          <SwiperSlide key={index}>
-            <Card {...card} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="ml-[-20px] ">
+        <Swiper
+          slidesPerView={2}
+          // spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          modules={[Navigation, Autoplay]}
+          className="mySwiper"
+        >
+          {cards.map((card, index) => (
+            <SwiperSlide key={index}>
+              <Card {...card} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </Section>
   );
 }
