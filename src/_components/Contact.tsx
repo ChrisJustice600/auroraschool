@@ -111,12 +111,12 @@ const Contact: React.FC = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
-                  className={`p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 ocus:outline-none${
+                  className={`p-2 mt-1 block w-full rounded-md border-primary shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-none ${
                     errors.fullName ? "border-red-500" : ""
                   }`}
                 />
                 {errors.fullName && (
-                  <p className="mt-1 text-sm text-red-500">{errors.fullName}</p>
+                  <p className="text-left mt-1 text-sm text-red-500">{errors.fullName}</p>
                 )}
               </div>
               <div>
@@ -132,12 +132,12 @@ const Contact: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 ${
+                  className={`p-2 mt-1 block w-full rounded-md border-primary shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-none ${
                     errors.email ? "border-red-500" : ""
                   }`}
                 />
                 {errors.email && (
-                  <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                  <p className="text-left mt-1 text-sm text-red-500">{errors.email}</p>
                 )}
               </div>
               <div>
@@ -153,12 +153,12 @@ const Contact: React.FC = () => {
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
-                  className={`p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 ${
+                  className={`p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-none ${
                     errors.phoneNumber ? "border-red-500" : ""
                   }`}
                 />
                 {errors.phoneNumber && (
-                  <p className="mt-1 text-sm text-red-500">
+                  <p className="text-left mt-1 text-sm text-red-500">
                     {errors.phoneNumber}
                   </p>
                 )}
@@ -168,7 +168,7 @@ const Contact: React.FC = () => {
                   htmlFor="message"
                   className="block text-left text-sm font-medium text-gray-700"
                 >
-                  Message
+                  Votre message
                 </label>
                 <textarea
                   id="message"
@@ -176,12 +176,14 @@ const Contact: React.FC = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className={`p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 ${
+                  className={`p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-none ${
                     errors.message ? "border-red-500" : ""
                   }`}
                 ></textarea>
                 {errors.message && (
-                  <p className="mt-1 text-sm text-red-500">{errors.message}</p>
+                  <p className="text-left mt-1 text-sm text-red-500">
+                    {errors.message}
+                  </p>
                 )}
               </div>
               <div>
