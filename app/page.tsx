@@ -1,5 +1,6 @@
 import About from "@/src/_components/About";
 import AdmissionSection from "@/src/_components/Admission";
+import { Faq } from "@/src/_components/Faq";
 import HeroSection from "@/src/_components/Hero";
 import Navbar from "@/src/_components/Navbar";
 import Program from "@/src/_components/Program";
@@ -15,6 +16,7 @@ export default function page() {
       <Program />
       <AdmissionSection />
       <Statistic />
+      <Faq />
     </div>
   );
 }
