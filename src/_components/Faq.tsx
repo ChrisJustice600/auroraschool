@@ -100,7 +100,7 @@ import Section from "./Section";
 
 export function Faq() {
   return (
-    <Section>
+    <Section className="bg-gray-100">
       <h2 className="text-left uppercase text-[2rem] font-caption text-primary font-bold mb-2">
         Questions frequemment posées
       </h2>
