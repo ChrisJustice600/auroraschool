@@ -34,31 +34,40 @@ export default function Statistic() {
   ];
 
   return (
-    <Section className="font-roboto">
-      <h2 className="text-left uppercase text-[2rem] font-caption text-primary font-bold mb-2">
-        Ecole chretienne aurora dawn <br /> Chiffres-clés 3
-      </h2>
-      <div className="ml-[-20px] ">
-        <Swiper
-          slidesPerView={2}
-          // spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          modules={[Navigation, Autoplay]}
-          className="mySwiper"
-        >
+    <Section className="font-roboto md:py-32">
+      <div className="flex flex-col md:flex-row">
+        <h2 className="text-left uppercase text-[2rem] font-caption text-primary font-bold mb-2">
+          Ecole chretienne aurora dawn <br /> Chiffres-clés 3
+        </h2>
+        {/* MOBILE VERSION COUROUSSEL CARD */}
+        <div className="md:hidden ml-[-20px] ">
+          <Swiper
+            slidesPerView={2}
+            // spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            modules={[Navigation, Autoplay]}
+            className="mySwiper"
+          >
+            {cards.map((card, index) => (
+              <SwiperSlide key={index}>
+                <Card {...card} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        {/* DESKTOP version Card */}
+        <div className="hidden md:flex flex-wrap justify-center items-center w-full my-6 gap-32">
           {cards.map((card, index) => (
-            <SwiperSlide key={index}>
-              <Card {...card} />
-            </SwiperSlide>
+            <Card key={index} {...card} />
           ))}
-        </Swiper>
+        </div>
       </div>
     </Section>
   );
@@ -71,9 +80,9 @@ interface CardProps {
   color: string;
 }
 
-const Card: React.FC<CardProps> = ({ icon, title, description, color }) => (
+const Card: React.FC<CardProps> = ({ title, description, color }) => (
   <div
-    className={`transform rotate-45 ${color} p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 w-[120px] h-[120px] flex flex-col justify-center items-center text-center  `}
+    className={`transform rotate-45 ${color}  p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 w-[120px] h-[120px] flex flex-col justify-center items-center `}
   >
     <div className="transform -rotate-45">
       <h3 className="text-white text-xl font-bold mb-1">{title}</h3>
