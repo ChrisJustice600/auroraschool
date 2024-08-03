@@ -77,7 +77,7 @@ const Contact: React.FC = () => {
         <h2 className="text-left uppercase text-[2rem] font-caption text-primary font-bold mb-2">
           Nous contactez
         </h2>
-        <div className="bg-white rounded-lg shadow-xl p-8 w-full">
+        <div className="bg-white rounded-lg shadow-xl p-8 w-full font-roboto">
           {" "}
           {/*max-w-md */}
           {isSubmitted ? (
@@ -202,7 +202,7 @@ const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${
+                  className={`w-full md:w-auto py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${
                     isSubmitting ? "opacity-50 cursor-not-allowed" : ""
                   }`}
                 >
