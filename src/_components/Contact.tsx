@@ -73,7 +73,10 @@ const Contact: React.FC = () => {
 
   return (
     <Section className="bg-gray-100">
-      <div className="bg-gray-100 flex items-center justify-center">
+      <div className="bg-gray-100 flex-col items-center justify-center">
+        <h2 className="text-left uppercase text-[2rem] font-caption text-primary font-bold mb-2">
+          Nous contactez
+        </h2>
         <div className="bg-white rounded-lg shadow-xl p-8 w-full">
           {" "}
           {/*max-w-md */}
@@ -105,7 +108,7 @@ const Contact: React.FC = () => {
                   htmlFor="fullName"
                   className="block text-left text-sm font-medium text-gray-700"
                 >
-                  nom complet
+                  Nom complet
                 </label>
                 <input
                   type="text"
@@ -203,7 +206,7 @@ const Contact: React.FC = () => {
                     isSubmitting ? "opacity-50 cursor-not-allowed" : ""
                   }`}
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "En cours..." : "Envoyé le Message"}
                 </button>
               </div>
             </form>
