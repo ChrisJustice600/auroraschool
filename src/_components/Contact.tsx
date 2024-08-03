@@ -73,8 +73,10 @@ const Contact: React.FC = () => {
 
   return (
     <Section className="bg-gray-100">
-      <div className="bg-gray-100 flex items-center justify-center p-4">
-        <div className="bg-white rounded-lg shadow-xl p-8 w-full max-w-md">
+      <div className="bg-gray-100 flex items-center justify-center">
+        <div className="bg-white rounded-lg shadow-xl p-8 w-full">
+          {" "}
+          {/*max-w-md */}
           {isSubmitted ? (
             <div className="text-center">
               <svg
@@ -116,53 +118,60 @@ const Contact: React.FC = () => {
                   }`}
                 />
                 {errors.fullName && (
-                  <p className="text-left mt-1 text-sm text-red-500">{errors.fullName}</p>
-                )}
-              </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-left text-sm font-medium text-gray-700"
-                >
-                  Votre email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className={`p-2 mt-1 block w-full rounded-md border-primary shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-none ${
-                    errors.email ? "border-red-500" : ""
-                  }`}
-                />
-                {errors.email && (
-                  <p className="text-left mt-1 text-sm text-red-500">{errors.email}</p>
-                )}
-              </div>
-              <div>
-                <label
-                  htmlFor="phoneNumber"
-                  className="block text-left text-sm font-medium text-gray-700"
-                >
-                  Votre numéro de telephone
-                </label>
-                <input
-                  type="tel"
-                  id="phoneNumber"
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  className={`p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-none ${
-                    errors.phoneNumber ? "border-red-500" : ""
-                  }`}
-                />
-                {errors.phoneNumber && (
                   <p className="text-left mt-1 text-sm text-red-500">
-                    {errors.phoneNumber}
+                    {errors.fullName}
                   </p>
                 )}
               </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-left text-sm font-medium text-gray-700"
+                  >
+                    Votre email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={`p-2 mt-1 block w-full rounded-md border-primary shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-none ${
+                      errors.email ? "border-red-500" : ""
+                    }`}
+                  />
+                  {errors.email && (
+                    <p className="text-left mt-1 text-sm text-red-500">
+                      {errors.email}
+                    </p>
+                  )}
+                </div>
+                <div>
+                  <label
+                    htmlFor="phoneNumber"
+                    className="block text-left text-sm font-medium text-gray-700"
+                  >
+                    Votre numéro de telephone
+                  </label>
+                  <input
+                    type="tel"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
+                    className={`p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-none ${
+                      errors.phoneNumber ? "border-red-500" : ""
+                    }`}
+                  />
+                  {errors.phoneNumber && (
+                    <p className="text-left mt-1 text-sm text-red-500">
+                      {errors.phoneNumber}
+                    </p>
+                  )}
+                </div>
+              </div>
+
               <div>
                 <label
                   htmlFor="message"
