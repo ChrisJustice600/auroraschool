@@ -105,7 +105,7 @@ const Contact: React.FC = () => {
                   htmlFor="fullName"
                   className="block text-left text-sm font-medium text-gray-700"
                 >
-                  Votre nom complet
+                  nom complet
                 </label>
                 <input
                   type="text"
@@ -129,7 +129,7 @@ const Contact: React.FC = () => {
                     htmlFor="email"
                     className="block text-left text-sm font-medium text-gray-700"
                   >
-                    Votre email
+                    Email
                   </label>
                   <input
                     type="email"
@@ -152,7 +152,7 @@ const Contact: React.FC = () => {
                     htmlFor="phoneNumber"
                     className="block text-left text-sm font-medium text-gray-700"
                   >
-                    Votre numéro de telephone
+                    Téléphone
                   </label>
                   <input
                     type="tel"
