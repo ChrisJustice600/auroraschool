@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <Section className="bg-gray-100">
+    <Section className="bg-gray-100 pb-20">
       <div className="bg-gray-100 flex-col items-center justify-center">
         <h2 className="text-left uppercase text-[2rem] font-caption text-primary font-bold mb-2">
           Nous contactez
