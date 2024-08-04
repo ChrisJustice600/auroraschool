@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
                 ></path>
               </svg>
               <p className="text-xl font-semibold text-gray-700">
-                Merci votre message!
+                Merci pour votre message!
               </p>
               <p className="mt-2 text-gray-600">On se revoit à bientot.</p>
             </div>
@@ -116,7 +116,7 @@ const Contact: React.FC = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
-                  className={`p-2 mt-1 block w-full rounded-md border-primary shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-none ${
+                  className={`p-2 mt-1 block w-full rounded-md border-primary shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:outline-none ${
                     errors.fullName ? "border-red-500" : ""
                   }`}
                 />
@@ -140,7 +140,7 @@ const Contact: React.FC = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`p-2 mt-1 block w-full rounded-md border-primary shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-none ${
+                    className={`p-2 mt-1 block w-full rounded-md border-primary shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:outline-none ${
                       errors.email ? "border-red-500" : ""
                     }`}
                   />
@@ -163,7 +163,7 @@ const Contact: React.FC = () => {
                     name="phoneNumber"
                     value={formData.phoneNumber}
                     onChange={handleChange}
-                    className={`p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-none ${
+                    className={`p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:outline-none ${
                       errors.phoneNumber ? "border-red-500" : ""
                     }`}
                   />
@@ -188,7 +188,7 @@ const Contact: React.FC = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className={`p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-none ${
+                  className={`p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-indigo-200 focus:outline-none ${
                     errors.message ? "border-red-500" : ""
                   }`}
                 ></textarea>
