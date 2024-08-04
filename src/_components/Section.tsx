@@ -1,12 +1,15 @@
 import { cn } from "@/lib/utils";
 import { PropsWithChildren } from "react";
 
-export default function Section(
-  props: PropsWithChildren<{ className?: string }>
-) {
+interface SectionProps extends PropsWithChildren {
+  className?: string;
+  id?: string;
+}
+
+export default function Section({ className, id, children }: SectionProps) {
   return (
-    <section className={cn(" px-4 py-4 m-auto", props.className)}>
-      <div className="max-w-5xl text-center mx-auto"> {props.children}</div>
+    <section id={id} className={cn("px-4 py-4 m-auto", className)}>
+      <div className="max-w-5xl text-center mx-auto">{children}</div>
     </section>
   );
 }

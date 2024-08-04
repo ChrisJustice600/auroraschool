@@ -3,7 +3,7 @@ import Section from "./Section";
 
 export default function Program() {
   return (
-    <Section className="bg-border">
+    <Section id="programmes" className="bg-border">
       <div className="">
         <div className="">
           <h2 className="text-left uppercase text-[2rem] font-caption text-primary font-bold mb-2">

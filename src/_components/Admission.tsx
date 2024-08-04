@@ -83,7 +83,10 @@ export default function AdmissionSection() {
   const pdfUrl = "/Lettre_de_motivation1.pdf"; // Remplacez par l'URL de votre fichier
 
   return (
-    <Section className="bg-gradient-to-r from-green-300 to-blue-500 py-16 px-4 sm:px-6 lg:px-8">
+    <Section
+      id="about"
+      className="bg-gradient-to-r from-green-300 to-blue-500 py-16 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-extrabold text-white text-left mb-12 font-caption">
           Admission à l'école chretienne aurora dawn

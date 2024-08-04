@@ -10,6 +10,14 @@ export default function Navbar() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="fixed w-full  top-0 left-0 z-50 ">
       <HeadInfos />{" "}
@@ -34,25 +42,41 @@ export default function Navbar() {
                 Accueil
               </a>
               <a
-                href="/programmes"
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault(); // Empêche la navigation par défaut
+                  scrollToSection("about"); // Appelle la fonction de défilement
+                }}
+                className="nav-item text-foreground hover:text-popover hover:bg-secondary-foreground px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
+              >
+                A propos
+              </a>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault(); // Empêche la navigation par défaut
+                  scrollToSection("programmes"); // Appelle la fonction de défilement
+                }}
                 className="nav-item text-foreground hover:text-popover hover:bg-secondary-foreground px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
               >
                 Programmes
               </a>
               <a
-                href="/admissions"
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault(); // Empêche la navigation par défaut
+                  scrollToSection("admission"); // Appelle la fonction de défilement
+                }}
                 className="nav-item text-foreground hover:text-popover hover:bg-secondary-foreground px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
               >
-                Admissions
+                Admission
               </a>
               <a
-                href="/vie-etudiante"
-                className="nav-item text-foreground hover:text-popover hover:bg-secondary-foreground px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
-              >
-                Vie Étudiante
-              </a>
-              <a
-                href="/contact"
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault(); // Empêche la navigation par défaut
+                  scrollToSection("contact"); // Appelle la fonction de défilement
+                }}
                 className="nav-item text-foreground hover:text-popover hover:bg-secondary-foreground px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
               >
                 Contact
