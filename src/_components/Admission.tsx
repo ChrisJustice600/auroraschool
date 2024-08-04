@@ -84,7 +84,7 @@ export default function AdmissionSection() {
 
   return (
     <Section
-      id="about"
+      id="admission"
       className="bg-gradient-to-r from-green-300 to-blue-500 py-16 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
