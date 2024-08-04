@@ -115,25 +115,41 @@ export default function Navbar() {
               Accueil
             </a>
             <a
-              href="/programmes"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault(); // Empêche la navigation par défaut
+                scrollToSection("about"); // Appelle la fonction de défilement
+              }}
+              className="text-foreground hover:bg-secondary-foreground block px-3 py-2 rounded-md text-base font-medium"
+            >
+              A propos
+            </a>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault(); // Empêche la navigation par défaut
+                scrollToSection("programme"); // Appelle la fonction de défilement
+              }}
               className="text-foreground hover:bg-secondary-foreground block px-3 py-2 rounded-md text-base font-medium"
             >
               Programmes
             </a>
             <a
-              href="/admissions"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault(); // Empêche la navigation par défaut
+                scrollToSection("admission"); // Appelle la fonction de défilement
+              }}
               className="text-foreground hover:bg-secondary-foreground block px-3 py-2 rounded-md text-base font-medium"
             >
               Admissions
             </a>
             <a
-              href="/vie-etudiante"
-              className="text-foreground hover:bg-secondary-foreground block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Vie Étudiante
-            </a>
-            <a
-              href="/contact"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault(); // Empêche la navigation par défaut
+                scrollToSection("contact"); // Appelle la fonction de défilement
+              }}
               className="text-foreground hover:bg-secondary-foreground block px-3 py-2 rounded-md text-base font-medium"
             >
               Contact
